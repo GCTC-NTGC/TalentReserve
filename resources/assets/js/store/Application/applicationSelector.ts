@@ -54,7 +54,6 @@ export const getApplicationsByJob = createCachedSelector(
     const applicationIds = Object.values(applications)
       .filter((application) => application.job_poster_id === jobId)
       .map(getId);
-    console.log(applicationIds);
     return applicationIds
       .map((id) =>
         constructNonNormalizedApplication(applications, applicationReviews, id),
