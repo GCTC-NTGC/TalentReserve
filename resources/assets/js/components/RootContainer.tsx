@@ -1,6 +1,5 @@
 import React from "react";
 import "core-js/modules/es.promise.finally";
-import "core-js/modules/es.object.values";
 import { Provider } from "react-redux";
 import configureStore from "../configureStore";
 import IntlContainer from "../IntlContainer";

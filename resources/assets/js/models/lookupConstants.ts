@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 export enum ReviewStatusId {
   ScreenedOut = 1,
   StillThinking = 2,
@@ -190,7 +188,7 @@ export function getKeyByValue(object, value): string {
 export function enumToIds(enumType: object): number[] {
   const enumVals = Object.values(enumType);
   // Note: this first array includes the list of ids as strings, followed by the list of names as strings
-  const enumIds = enumVals.filter((item) => _.isNaN(Number(item)));
+  const enumIds = enumVals.filter((item) => !Number.isNaN(Number(item)));
   return enumIds.map((id) => Number(id));
 }
 
